@@ -1,0 +1,7 @@
+{
+    "routes": [
+      { "src": "/contact", "dest": "server.js" },
+      { "src": "/(.*)", "dest": "/$1" }
+    ]
+  }
+  
