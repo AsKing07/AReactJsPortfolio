@@ -1,10 +1,11 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, Button } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import { projet1, projet2, projet3, projet4, projet5, projet6 } from "../assets/img/projects";
 import { projet7, projet9, projet10, projet11, projet12, projet13, projet14 } from "../assets/img/projects";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+
 
 export const Projects = () => {
 
@@ -130,7 +131,7 @@ export const Projects = () => {
                     </Nav.Item>
 
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Section 3</Nav.Link>
                     </Nav.Item>
 
                   </Nav>
@@ -168,7 +169,8 @@ export const Projects = () => {
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="third">
-                      <p>Cette section est vide pour le moment.</p>
+                      <p>Empty content for the moment.</p>
+                      <p>More projects on my  <a href="github.com/AsKing07"><Button variant="light">GitHub Profile</Button></a>   </p>
                     </Tab.Pane>
 
                   </Tab.Content>

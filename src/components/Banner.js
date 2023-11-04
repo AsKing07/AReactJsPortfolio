@@ -5,6 +5,8 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import TextShpere from "./TextSphere";
+
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -50,6 +52,16 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+      <Row>
+      <Col xs={12} md={{span:4, offset:6}} xl={5}>
+        <TrackVisibility>
+            {({ isVisible }) =>
+          <div className={isVisible ? "animate__animated animate__zoomIn" : ""} style={{display:"flex" }}>
+                  <img src={headerImg} alt="Header Img" style={{height:"300px"}}/>
+          </div>}
+        </TrackVisibility>
+      </Col>
+      </Row>
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -73,10 +85,18 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <TextShpere />
                 </div>}
             </TrackVisibility>
           </Col>
+          {/* <Col>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                 <TextShpere />
+                </div>}
+            </TrackVisibility>
+          </Col> */}
         </Row>
       </Container>
     </section>

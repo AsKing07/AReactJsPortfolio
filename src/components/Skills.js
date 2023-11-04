@@ -145,8 +145,8 @@ export const Skills = () => {
 
               <div className="download-button">
                 <a
-                  href="/chemin-vers-votre-cv.pdf"
-                  download="votre-cv.pdf"
+                  href="/CV.pdf"
+                  download
                   className="btn btn-light "
                   
                 >
