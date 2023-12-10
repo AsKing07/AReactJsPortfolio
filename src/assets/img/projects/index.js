@@ -11,6 +11,8 @@ import projet11 from './project-img11.png'
 import projet12 from './project-img12.png'
 import projet13 from './project-img13.png'
 import projet14 from './project-img14.png'
+import projet15 from './project-img15.png'
+import projet16 from './project-img16.png'
 
 
 export{
@@ -26,5 +28,7 @@ export{
     projet11,
     projet12,
     projet13,
-    projet14
+    projet14,
+    projet15,
+    projet16,
 }

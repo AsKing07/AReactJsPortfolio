@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav, Button } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import { projet1, projet2, projet3, projet4, projet5, projet6 } from "../assets/img/projects";
-import { projet7, projet9, projet10, projet11, projet12, projet13, projet14 } from "../assets/img/projects";
+import { projet1, projet16, projet2, projet3, projet4, projet5, projet6 } from "../assets/img/projects";
+import { projet7, projet9, projet10, projet11, projet12, projet13, projet14,projet15 } from "../assets/img/projects";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -10,13 +10,23 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 
   const projects1 = [
+
     {
-      title: "Task Manager",
-      description: "Design & Development: This project is a basic FullStack task manager. It is designed to help you organize and track your tasks efficiently and was created within a learning context.",
-      imgUrl: projet1,
-      demo:'https://taskmanager-asking.vercel.app/',
-      code:'https://github.com/AsKing07/TaskManager-FullStackWebApp-GestionnairedeTaches-ApplicationFullStack'
+      title: "Asking Store",
+      description: "An ecommerce web project carried out with NextJs, MongoDB, with Stripe and KKipay as payment methods in test mode",
+      imgUrl: projet15,
+      demo:"https://asking-store.vercel.app/",
+      code:'https://github.com/AsKing07/asking_store_frontend'
     },
+    {
+      title: "Asking Store",
+      description: "The dashboard admin panel of the project Asking Store. Only admin can acces demo",
+      imgUrl: projet16,
+      demo:"https://asking-store-adminpanel.vercel.app/",
+      code:'https://github.com/AsKing07/nextjs_ecommerce_asking_store_admin'
+    },
+
+ 
     {
       title: "React Native Job-Search App",
       description: "A simple react_native basic app of Job search",
@@ -45,22 +55,15 @@ export const Projects = () => {
       demo:'#projects',
       code: "https://github.com/AsKing07/Gestion-de-Competences-en-C-avec-Qt---Projet-Graphique"
     },
-    {
-      title: "Basic ECommerce-FullStack-App",
-      description: "A simple FullStack ECommerce App with basic functionality",
-      imgUrl: projet6,
-      demo:"https://ecom-asing.vercel.app/products",
-      code:'https://github.com/AsKing07/ECommerce-FullStack-App/tree/main'
-    },
 
   ];
   const projects2 = [
     {
-      title: "DollarsToCents",
-      description: "Program to convert dollar to cents with the cents of: Quarters (25 ¢) Dimes (10 ¢) Nickels (5 ¢) Pennies (1 ¢)",
-      imgUrl: projet7,
-      demo:'https://asking07.github.io/DollarsToCents/',
-      code:'https://github.com/AsKing07/DollarsToCents/tree/main'
+      title: "Task Manager",
+      description: "Design & Development: This project is a basic FullStack task manager. It is designed to help you organize and track your tasks efficiently and was created within a learning context.",
+      imgUrl: projet1,
+      demo:'https://taskmanager-asking.vercel.app/',
+      code:'https://github.com/AsKing07/TaskManager-FullStackWebApp-GestionnairedeTaches-ApplicationFullStack'
     },
     {
       title: "AI Summarizer",
@@ -70,11 +73,11 @@ export const Projects = () => {
       code:'https://github.com/AsKing07/Convertisseur'
     },
     {
-      title: "Calculator",
-      description: "Une calculatrice intéractive réalisée avec HTML CSS et JavaScrip",
-      imgUrl: projet9,
-      demo:"https://asking07.github.io/Calculator/",
-      code:'https://github.com/AsKing07/Calculator'
+      title: "Basic ECommerce-FullStack-App",
+      description: "A simple FullStack ECommerce App with basic functionality",
+      imgUrl: projet6,
+      demo:"https://ecom-asing.vercel.app/products",
+      code:'https://github.com/AsKing07/ECommerce-FullStack-App/tree/main'
     },
     {
       title: "Cars Showcase",
@@ -99,6 +102,30 @@ export const Projects = () => {
     },
 
   ];
+
+  const projects3= [
+    {
+      title: "DollarsToCents",
+      description: "Program to convert dollar to cents with the cents of: Quarters (25 ¢) Dimes (10 ¢) Nickels (5 ¢) Pennies (1 ¢)",
+      imgUrl: projet7,
+      demo:'https://asking07.github.io/DollarsToCents/',
+      code:'https://github.com/AsKing07/DollarsToCents/tree/main'
+    },
+    {
+      title: "Calculator",
+      description: "Une calculatrice intéractive réalisée avec HTML CSS et JavaScrip",
+      imgUrl: projet9,
+      demo:"https://asking07.github.io/Calculator/",
+      code:'https://github.com/AsKing07/Calculator'
+    },
+    {
+      title: "Bin2Dec Converter",
+      description: "Un convertisseur de Binaire en Decimal avec HTML CSS et JavaScrip",
+      imgUrl: projet12,
+      demo:"https://asking07.github.io/BinToDecimal-Converter/",
+      code:'https://github.com/AsKing07/BinToDecimal-Converter'
+    },
+  ]
 
   return (
     <section className="project" id="projects">
@@ -169,8 +196,18 @@ export const Projects = () => {
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="third">
-                      <p>Empty content for the moment.</p>
-                      <p>More projects on my  <a href="github.com/AsKing07"><Button variant="light">GitHub Profile</Button></a>   </p>
+                    <Row>
+                        {
+                          projects3.map((project3, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project3}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
 
                   </Tab.Content>
